@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+    >
+    
+    <bean id="add1" class="com.spring.SI.Address">
+    <property name="city" value="bhayander"></property>
+    <property name="state" value="bhayander"></property>
+    <property name="country" value="bhayander"></property>
+    </bean>
+    
+    <bean id="add2" class="com.spring.SI.Address">
+    <property name="city" value="mira"></property>
+    <property name="state" value="mira"></property>
+    <property name="country" value="mira"></property>    
+    </bean>
+    
+    <bean id="emp" class="com.spring.SI.Employee">
+    <property name="age" value="23"></property>
+    <property name="name" value="Prag"></property>
+    <property name="addrList">
+    <list>
+    <ref bean="add1"/>
+    <ref bean="add2"/>    
+    </list>
+    </property>    
+    </bean>
+    
+    </beans>
